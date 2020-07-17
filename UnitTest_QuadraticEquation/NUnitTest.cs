@@ -16,6 +16,13 @@ namespace UnitTest_QuadraticEquation
             string actualResult = equation.Discriminant();
             Assert.AreEqual("Рівняння немає коренів", actualResult);
         }
+        [Test]
+        public void DiscriminantTestAIsEqualToZero()
+        {
+            QuadraticEquation equation = new QuadraticEquation(0, 2, 7);
+            string actualResult = equation.Discriminant();
+            Assert.AreEqual("Корені рівняння задані не вірно", actualResult);
+        }
 
     }
 }
