@@ -23,6 +23,13 @@ namespace UnitTest_QuadraticEquation
             string actualResult = equation.Discriminant();
             Assert.AreEqual("Корені рівняння задані не вірно", actualResult);
         }
+        [Test]
+        public void DiscriminantTestIsZero()
+        {
+            QuadraticEquation equation = new QuadraticEquation(1, -6, 9);
+            string actualResult = equation.Discriminant();
+            Assert.AreEqual("x = 3", actualResult);
+        }
 
     }
 }
